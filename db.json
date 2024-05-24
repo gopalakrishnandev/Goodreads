@@ -1,0 +1,240 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "Keep Going",
+      "author": "Author 1",
+      "coverImage": "https://via.placeholder.com/150",
+      "description": "Description of the book",
+      "averageRating": 4.5,
+      "genre": "Mystery",
+      "reviews": [
+        {
+          "username": "user1",
+          "rating": 3,
+          "review": "Great book!"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "News Paper",
+      "author": "Author 1",
+      "coverImage": "https://via.placeholder.com/150",
+      "description": "Description of the book",
+      "averageRating": 4.5,
+      "genre": "Fiction",
+      "reviews": [
+        {
+          "username": "user1",
+          "rating": 5,
+          "review": "Great book!"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Any thing you want",
+      "author": "Author 1",
+      "coverImage": "https://via.placeholder.com/150",
+      "description": "Description of the book",
+      "averageRating": 4.5,
+      "genre": "Non-Fiction",
+      "reviews": [
+        {
+          "username": "user1",
+          "rating": 5,
+          "review": "Great book!"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Book Title 1",
+      "author": "Author 1",
+      "coverImage": "https://via.placeholder.com/150",
+      "description": "Description of the book",
+      "averageRating": 4.5,
+      "genre": "Mystery",
+      "reviews": [
+        {
+          "username": "user1",
+          "rating": 5,
+          "review": "Great book!"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Deep Work",
+      "author": "Author 1",
+      "coverImage": "https://via.placeholder.com/150",
+      "description": "Description of the book",
+      "averageRating": 4.5,
+      "genre": "Mystery",
+      "reviews": [
+        {
+          "username": "user1",
+          "rating": 5,
+          "review": "Great book!"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Atomic habits",
+      "author": "Author 1",
+      "coverImage": "https://via.placeholder.com/150",
+      "description": "Description of the book",
+      "averageRating": 4.5,
+      "genre": "Mystery",
+      "reviews": [
+        {
+          "username": "user1",
+          "rating": 5,
+          "review": "Great book!"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Diary",
+      "author": "Author 1",
+      "coverImage": "https://via.placeholder.com/150",
+      "description": "Description of the book",
+      "averageRating": 4.5,
+      "genre": "Mystery",
+      "reviews": [
+        {
+          "username": "user1",
+          "rating": 5,
+          "review": "Great book!"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "title": "Devil",
+      "author": "Author 1",
+      "coverImage": "https://via.placeholder.com/150",
+      "description": "Description of the book",
+      "averageRating": 4.5,
+      "genre": "Mystery",
+      "reviews": [
+        {
+          "username": "user1",
+          "rating": 5,
+          "review": "Great book!"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "title": "Jane Green",
+      "author": "Author 1",
+      "coverImage": "https://via.placeholder.com/150",
+      "description": "Description of the book",
+      "averageRating": 4.5,
+      "genre": "Mystery",
+      "reviews": [
+        {
+          "username": "user1",
+          "rating": 5,
+          "review": "Great book!"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Girl Abroad",
+      "author": "Author 1",
+      "coverImage": "https://via.placeholder.com/150",
+      "description": "Description of the book",
+      "averageRating": 4.5,
+      "genre": "Mystery",
+      "reviews": [
+        {
+          "username": "user1",
+          "rating": 5,
+          "review": "Great book!"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Five years",
+      "author": "Author 1",
+      "coverImage": "https://via.placeholder.com/150",
+      "description": "Description of the book",
+      "averageRating": 4.5,
+      "genre": "Mystery",
+      "reviews": [
+        {
+          "username": "user1",
+          "rating": 5,
+          "review": "Great book!"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Beach Read",
+      "author": "Author 1",
+      "coverImage": "https://via.placeholder.com/150",
+      "description": "Description of the book",
+      "averageRating": 4.5,
+      "genre": "Mystery",
+      "reviews": [
+        {
+          "username": "user1",
+          "rating": 5,
+          "review": "Great book!"
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "user1",
+      "email": "user1@example.com",
+      "profilePicture": "https://via.placeholder.com/150",
+      "bookshelves": [
+        {
+          "id": 1,
+          "name": "Read",
+          "books": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Currently Reading",
+          "books": []
+        },
+        {
+          "id": 3,
+          "name": "To-Read",
+          "books": []
+        }
+      ]
+    },
+    {
+      "id": "4166",
+      "username": "sampath",
+      "email": "semsampathkumar@gmail.com"
+    },
+    {
+      "id": "fc2e",
+      "username": "sam",
+      "email": "sam@gmail.com"
+    },
+    {
+      "id": "1793",
+      "username": "sachin",
+      "email": "s@gmail.com",
+      "password": "123"
+    }
+  ]
+}

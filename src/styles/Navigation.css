@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2196f3;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+}
+
+.welcome {
+  margin-right: 10px;
+}
+
+.logout-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}

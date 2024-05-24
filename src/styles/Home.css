@@ -1,0 +1,38 @@
+/* Home.css */
+.home-container {
+  padding: 20px;
+}
+
+.books-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.book-item {
+  flex: 1 1 calc(25% - 40px); /* 4 items per row with some gap */
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.2s;
+}
+
+.book-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.book-item h2 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.book-item p {
+  color: #666;
+}
