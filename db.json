@@ -571,23 +571,10 @@
   ],
   "users": [
     {
-      "id": "c78f",
-      "username": "ssss",
-      "email": "d@gmail.com",
-      "password": "111",
-      "bookshelves": {
-        "read": [
-          "12",
-          "2"
-        ],
-        "currentlyReading": [
-          "12",
-          "1",
-          "8",
-          "30"
-        ],
-        "toRead": []
-      }
+      "id": "cd7a",
+      "username": "test",
+      "email": "test@gmail.com",
+      "password": "test@123"
     }
   ]
 }
