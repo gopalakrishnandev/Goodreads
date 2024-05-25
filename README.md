@@ -8,6 +8,14 @@ npm run dev
 
 ```
 
+# Credentials
+
+Here are the login credentials you can use:
+Email: test@gmail.com,
+Password: test@123.
+
+Alternatively, you can create a new account.
+
 # Usage
 
 # User Authentication
@@ -28,6 +36,10 @@ Add to Bookshelf: Click on a book and use the options to add it to "Read," "Curr
 
 View Bookshelves: Navigate to your profile to view and manage your bookshelves.
 
-# Book Details
+# Viewing Book Details
 
-Users can view detailed information about each book, including title, author, cover image, description, average rating, and user reviews. They can also rate books and write reviews, and see related books or recommendations based on the current book being viewed.
+Detailed Information: Click on a book to view its detailed information, including title, author, cover image, description, average rating, and user reviews.
+
+Rating and Reviews: Users can rate the book and write reviews.
+
+Related Books: The app will display related books or recommendations based on the current book being viewed.
