@@ -50,7 +50,7 @@ const AppContent = () => {
           }
         />
         <Route
-          path="/bookshelves"
+          path="/bookshelves/:id"
           element={
             <ProtectedRoute>
               <Bookshelves />

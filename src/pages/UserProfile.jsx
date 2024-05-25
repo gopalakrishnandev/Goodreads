@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import "../styles/UserProfile.css";
 
 const UserProfile = () => {
   const { id } = useParams();
@@ -24,34 +25,51 @@ const UserProfile = () => {
 
   const handleProfileUpdate = async (e) => {
     e.preventDefault();
-    await axios.put(`http://localhost:5000/users/${id}`, user);
+    try {
+      await axios.put(`http://localhost:5000/users/${id}`, user);
+    } catch (error) {
+      console.error("Error updating profile", error);
+    }
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading...</div>;
   }
 
   if (!user) {
-    return <div>User not found</div>;
+    return <div className="error">User not found</div>;
   }
 
   return (
-    <div>
-      <h1>{user.username}&apos;s Profile</h1>
+    <div className="container">
       <form onSubmit={handleProfileUpdate}>
-        <input
-          type="text"
-          value={user.username}
-          onChange={(e) => setUser({ ...user, username: e.target.value })}
-          required
-        />
-        <input
-          type="email"
-          value={user.email}
-          onChange={(e) => setUser({ ...user, email: e.target.value })}
-          required
-        />
-        <button type="submit">Update Profile</button>
+        <h2>Update Profile</h2>
+
+        <div className="form-group mt-4">
+          <label htmlFor="exampleInputEmail1" className="form-label">
+            User name
+          </label>
+          <input
+            type="text"
+            value={user.username}
+            onChange={(e) => setUser({ ...user, username: e.target.value })}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="exampleInputEmail1" className="form-label">
+            Email address
+          </label>
+          <input
+            type="email"
+            value={user.email}
+            onChange={(e) => setUser({ ...user, email: e.target.value })}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <button type="submit">Update Profile</button>
+        </div>
       </form>
     </div>
   );
