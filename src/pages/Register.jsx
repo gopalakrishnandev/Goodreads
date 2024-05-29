@@ -1,15 +1,17 @@
-import { useState } from "react";
+import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 
 const Register = () => {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const navigate = useNavigate();
 
-  const handleRegister = async (e) => {
-    e.preventDefault();
+  const onSubmit = async (data) => {
+    const { username, email, password } = data;
     try {
       await axios.post("http://localhost:5000/users", {
         username,
@@ -26,56 +28,64 @@ const Register = () => {
     <div className="login-container">
       <div className="login-content">
         <h2>Register</h2>
-        <form onSubmit={handleRegister}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <label htmlFor="exampleInputUsername" className="form-label">
+            <label htmlFor="username" className="form-label">
               Username
             </label>
             <input
               type="text"
               className="form-control"
-              id="exampleInputUsername"
+              id="username"
               placeholder="Username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              required
+              {...register("username", { required: "Username is required" })}
             />
+            {errors.username && (
+              <span className="error-message">{errors.username.message}</span>
+            )}
           </div>
           <div className="mb-3">
-            <label htmlFor="exampleInputEmail" className="form-label">
+            <label htmlFor="email" className="form-label">
               Email address
             </label>
             <input
               type="email"
               className="form-control"
-              id="exampleInputEmail"
+              id="email"
               placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
+              {...register("email", {
+                required: "Email is required",
+                pattern: {
+                  value: /^\S+@\S+$/i,
+                  message: "Invalid email format",
+                },
+              })}
             />
+            {errors.email && (
+              <span className="error-message">{errors.email.message}</span>
+            )}
           </div>
           <div className="mb-3">
-            <label htmlFor="exampleInputPassword" className="form-label">
+            <label htmlFor="password" className="form-label">
               Password
             </label>
             <input
               type="password"
               className="form-control"
-              id="exampleInputPassword"
+              id="password"
               placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
+              {...register("password", { required: "Password is required" })}
             />
+            {errors.password && (
+              <span className="error-message">{errors.password.message}</span>
+            )}
           </div>
           <button type="submit" className="btn btn-primary">
             Register
           </button>
         </form>
         <div className="mt-2">
-          {" "}
-          Already have an account?{" "}
+          Already have an account?
           <span style={{ marginLeft: "2px" }}>
             <Link to={"/"}>Login</Link>
           </span>
